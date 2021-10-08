@@ -2,16 +2,16 @@
 """
 Created on Tue Aug 31 23:00:40 2021
 
-@author: DELL
+@author: ESHAN
 """
-""
+
 
 import pygame
 import random
 pygame.font.init()
 pygame.mixer.init()
 
-HIT_SOUND = pygame.mixer.Sound("E:/PROJECTS/PYTHON PROJECTS/GAMES/SPACE WARS/Gun+Silencer.mp3")
+HIT_SOUND = pygame.mixer.Sound("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/Gun+Silencer.mp3")
 
 WIDTH, HEIGHT = 1050, 600
 WHITE = (255, 255, 255)
@@ -25,64 +25,57 @@ CHIP_4 = pygame.Rect(1050 - 400, 435, 9, 4)
 CHIP_5 = pygame.Rect(1050 - 500, 430, 8, 4)
 CHIP_6 = pygame.Rect(1050 - 550, 425, 5, 3)
 CHIP_7 = pygame.Rect(1050 - 100, 435, 9, 4)
-pygame.display.set_caption("DRAGON GAME")
+pygame.display.set_caption("DINOSAUR GAME")
 
 HIT = pygame.USEREVENT + 1
 
 FPS = 120
 
 DINO_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/dino.png"), (60,65))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/dino.png"), (60,65))
 DINO = DINO_IMAGE.get_rect()
 DINO.center = (200,381)
 
 UPPER_BIRD_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/bird.png"), (30, 25))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/bird.png"), (30, 25))
 UPPER_BIRD = UPPER_BIRD_IMAGE.get_rect()
-#UPPER_BIRD.center = (900,360)
 
 BIG_CACTUS_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/small cactus.png"), (30, 50))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/small cactus.png"), (30, 50))
 BIG_CACTUS = BIG_CACTUS_IMAGE.get_rect()
-#BIG_CACTUS.center = (800, 390)
 
 SMALL_CACTUS_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/small cactus.png"), (20, 40))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/small cactus.png"), (20, 40))
 SMALL_CACTUS = SMALL_CACTUS_IMAGE.get_rect()
-#SMALL_CACTUS.center = (700, 394)
 
 LOWER_BIRD_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/bird.png"), (30, 25))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/bird.png"), (30, 25))
 LOWER_BIRD = LOWER_BIRD_IMAGE.get_rect()
-#LOWER_BIRD.center = (950,390)
 
 TREE_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/tree.png"), (25, 40))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/tree.png"), (25, 40))
 TREE = TREE_IMAGE.get_rect()
-#TREE.center = (850, 350)
 
 HUGE_CACTUS_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/huge cactus.png"), (65, 50))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/huge cactus.png"), (65, 50))
 HUGE_CACTUS = HUGE_CACTUS_IMAGE.get_rect()
-#HUGE_CACTUS.center = (850, 350)
 
 TWO_CACTUS_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/two cactus.png"), (65, 50))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/two cactus.png"), (65, 50))
 TWO_CACTUS = TWO_CACTUS_IMAGE.get_rect()
-#TWO_CACTUS.center = (850, 350)
 
 PLANE_1_IMAGE = pygame.transform.rotate(pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/plane 1.png"), (85, 70)), -30)
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/plane 1.png"), (85, 70)), -30)
 PLANE_1 = PLANE_1_IMAGE.get_rect()
 PLANE_1.center = (-800, 100)
 
 PLANE_2_IMAGE = pygame.transform.rotate(pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/plane 2.png"), (50, 80)), 90)
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/plane 2.png"), (50, 80)), 90)
 PLANE_2 = PLANE_2_IMAGE.get_rect()
 PLANE_2.center = (WIDTH + 20, 150)
 
 CLOUD_IMAGE = pygame.transform.scale(
-    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/cloud.png"), (75, 50))
+    pygame.image.load("E:/PROJECTS/PYTHON PROJECTS/GAMES/GOOGLE DINOSAUR GAME/MAIN CODE FILE/data/cloud.png"), (75, 50))
 CLOUD_IMAGE_x = WIDTH
 CLOUD = CLOUD_IMAGE.get_rect()
 
